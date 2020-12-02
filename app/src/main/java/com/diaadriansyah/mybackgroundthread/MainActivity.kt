@@ -10,7 +10,7 @@ import kotlinx.coroutines.*
 class MainActivity : AppCompatActivity() {
     companion object {
         private const val INPUT_STRING = "Halo Ini Demo AsyncTask"
-        private const val LOG_ASYNC = "DemoAsync"
+        private const val LOG_ASYNC = "Demo Async"
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         GlobalScope.launch(Dispatchers.Default){
             //background thread
             val input = INPUT_STRING
-            var output: String? = null
+            val output: String?
 
             Log.d(LOG_ASYNC, "status: doInBackground")
             try {
